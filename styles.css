@@ -1,0 +1,197 @@
+:root {
+  color-scheme: light;
+  --ink: #1f1235;
+  --muted: #6e6380;
+  --paper: #fff9ec;
+  --gold: #f7c948;
+  --coral: #ff7a7a;
+  --violet: #7c4dff;
+  --sky: #9ee7ff;
+  --shadow: rgba(31, 18, 53, 0.22);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(158, 231, 255, 0.65), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(255, 122, 122, 0.42), transparent 30rem),
+    linear-gradient(135deg, #fffdf7 0%, #f2edff 100%);
+}
+
+.app {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: var(--violet);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  line-height: 0.9;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 22px auto 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.book-stage {
+  display: grid;
+  place-items: center;
+  min-height: 430px;
+  perspective: 1100px;
+}
+
+.butterfly-book {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(760px, 90vw);
+  height: min(420px, 52vw);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.wing {
+  position: absolute;
+  top: 5%;
+  width: 46%;
+  height: 90%;
+  background:
+    radial-gradient(circle at 34% 28%, rgba(255,255,255,0.9) 0 9%, transparent 10%),
+    radial-gradient(circle at 64% 68%, rgba(255,255,255,0.78) 0 7%, transparent 8%),
+    linear-gradient(145deg, var(--coral), var(--violet) 62%, #32145f);
+  box-shadow: 0 28px 60px var(--shadow), inset 0 0 0 7px rgba(255,255,255,0.28);
+  transition: transform 700ms cubic-bezier(.2,.8,.2,1), filter 700ms ease;
+  transform-style: preserve-3d;
+}
+
+.wing-left {
+  left: 4%;
+  border-radius: 76% 18% 54% 28% / 58% 28% 70% 34%;
+  transform-origin: 100% 50%;
+}
+
+.wing-right {
+  right: 4%;
+  border-radius: 18% 76% 28% 54% / 28% 58% 34% 70%;
+  transform-origin: 0 50%;
+}
+
+.wing-pattern {
+  position: absolute;
+  border: 4px solid rgba(255,255,255,0.7);
+  background: rgba(247, 201, 72, 0.45);
+}
+
+.wing-pattern.upper {
+  width: 45%;
+  height: 34%;
+  top: 14%;
+  left: 24%;
+  border-radius: 65% 35% 55% 45%;
+}
+
+.wing-pattern.lower {
+  width: 34%;
+  height: 28%;
+  right: 18%;
+  bottom: 16%;
+  border-radius: 45% 55% 70% 30%;
+}
+
+.spine {
+  position: absolute;
+  z-index: 3;
+  width: 38px;
+  height: 82%;
+  border-radius: 999px;
+  background: linear-gradient(#2a1848, #13091f);
+  box-shadow: 0 16px 30px var(--shadow);
+}
+
+.page-content {
+  z-index: 2;
+  display: grid;
+  gap: 10px;
+  width: min(360px, 54vw);
+  min-height: 190px;
+  padding: 30px;
+  border-radius: 36px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 2px rgba(31,18,53,0.08), 0 24px 55px var(--shadow);
+  transition: opacity 240ms ease, transform 360ms ease;
+}
+
+.page-number {
+  color: var(--violet);
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+}
+
+.page-copy {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.butterfly-book.flapping .wing-left {
+  transform: rotateY(74deg) rotateZ(-3deg);
+  filter: saturate(1.2) brightness(0.88);
+}
+
+.butterfly-book.flapping .wing-right {
+  transform: rotateY(-74deg) rotateZ(3deg);
+  filter: saturate(1.2) brightness(0.88);
+}
+
+.butterfly-book.flapping .page-content {
+  opacity: 0.12;
+  transform: scale(0.86) translateY(8px);
+}
+
+.controls { margin-top: 8px; }
+
+.primary {
+  border: 0;
+  border-radius: 999px;
+  padding: 15px 24px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--violet), var(--coral));
+  font-weight: 900;
+  font-size: 1rem;
+  box-shadow: 0 14px 30px rgba(124,77,255,0.3);
+  cursor: pointer;
+}
+
+.status { color: var(--muted); font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wing,
+  .page-content { transition-duration: 1ms; }
+}
