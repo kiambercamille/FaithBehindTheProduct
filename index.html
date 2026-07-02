@@ -30,8 +30,6 @@
       <button class="bb-wing bb-wing-right bb-wing-bottom" type="button" data-story="goodnews" aria-pressed="false">
         <span>Spread The Good News</span>
       </button>
-
-      <span class="bb-butterfly-body" aria-hidden="true"></span>
     </div>
   </div>
 
@@ -86,7 +84,7 @@
     .bb-butterfly-stage {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(180px, 1fr) minmax(280px, 1.15fr) minmax(180px, 1fr);
+      grid-template-columns: minmax(210px, 1fr) minmax(280px, 1.15fr) minmax(210px, 1fr);
       grid-template-rows: 1fr 1fr;
       gap: 18px 20px;
       align-items: stretch;
@@ -162,28 +160,30 @@
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08), 0 24px 55px rgba(0, 0, 0, 0.28);
     }
 
-    .bb-wing-left {
-      justify-self: end;
-      transform-origin: 100% 50%;
-      border-radius: 88% 20% 68% 22% / 72% 22% 78% 28%;
+    .bb-wing-left,
+    .bb-wing-right {
+      width: 100%;
+      max-width: 330px;
+      min-height: 176px;
       background:
         radial-gradient(circle at 22% 12%, #fff7dc 0 3%, transparent 4%),
         radial-gradient(circle at 16% 24%, #fff7dc 0 2%, transparent 3%),
-        repeating-linear-gradient(105deg, rgba(15, 8, 8, 0.95) 0 5px, transparent 6px 28px),
-        linear-gradient(135deg, #1a0c0a 0%, var(--bb-red) 18%, var(--bb-coral) 42%, var(--bb-teal) 60%, var(--bb-red) 78%, #200808 100%);
-      animation: bb-left-wing-breathe 4.8s ease-in-out infinite;
+        repeating-linear-gradient(100deg, rgba(15, 8, 8, 0.88) 0 5px, transparent 6px 28px),
+        linear-gradient(135deg, #1a0c0a 0%, var(--bb-red) 18%, var(--bb-coral) 39%, var(--bb-teal) 58%, var(--bb-blue) 70%, var(--bb-red) 88%, #200808 100%);
+    }
+
+    .bb-wing-left {
+      justify-self: end;
+      transform-origin: 100% 50%;
+      border-radius: 78% 22% 72% 28% / 64% 28% 72% 36%;
+      animation: bb-left-wing-flap 2.8s ease-in-out infinite;
     }
 
     .bb-wing-right {
       justify-self: start;
       transform-origin: 0% 50%;
-      border-radius: 24% 86% 24% 70% / 28% 76% 24% 72%;
-      background:
-        radial-gradient(ellipse at 46% 30%, rgba(7,7,7,0) 0 31%, rgba(7,7,7,0.55) 32% 40%, rgba(7,7,7,0) 42%),
-        radial-gradient(ellipse at 48% 74%, rgba(7,7,7,0) 0 30%, rgba(7,7,7,0.52) 31% 39%, rgba(7,7,7,0) 41%),
-        repeating-linear-gradient(96deg, rgba(255,255,255,0.16) 0 2px, transparent 4px 12px),
-        linear-gradient(135deg, var(--bb-red) 0%, #e94f43 25%, var(--bb-blue) 43%, var(--bb-teal) 52%, var(--bb-red) 76%, #180608 100%);
-      animation: bb-right-wing-breathe 4.8s ease-in-out infinite;
+      border-radius: 22% 78% 28% 72% / 28% 64% 36% 72%;
+      animation: bb-right-wing-flap 2.8s ease-in-out infinite;
     }
 
     .bb-wing-top { align-self: end; }
@@ -197,7 +197,8 @@
       border-radius: inherit;
       background:
         linear-gradient(120deg, transparent 0 28%, rgba(255, 218, 121, 0.45) 29% 35%, transparent 36% 100%),
-        linear-gradient(34deg, transparent 0 54%, rgba(0, 168, 198, 0.58) 55% 60%, transparent 61% 100%);
+        linear-gradient(34deg, transparent 0 54%, rgba(0, 168, 198, 0.58) 55% 60%, transparent 61% 100%),
+        radial-gradient(ellipse at 54% 46%, rgba(255,255,255,0.32) 0 13%, transparent 14%);
       opacity: 0.72;
       pointer-events: none;
     }
@@ -237,58 +238,29 @@
     }
 
     .bb-butterfly-stage.is-flapping .bb-wing-left {
-      transform: rotateY(64deg) rotateZ(-4deg) scale(0.96);
+      transform: rotateY(78deg) rotateZ(-5deg) scale(0.94);
       animation-play-state: paused;
     }
 
     .bb-butterfly-stage.is-flapping .bb-wing-right {
-      transform: rotateY(-64deg) rotateZ(4deg) scale(0.96);
+      transform: rotateY(-78deg) rotateZ(5deg) scale(0.94);
       animation-play-state: paused;
     }
 
-    .bb-butterfly-body {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 54px;
-      height: 86px;
-      border-radius: 999px;
-      background: linear-gradient(#36d4df, #08394b 72%, #04171e);
-      box-shadow: 0 15px 34px rgba(0,0,0,0.45), inset 0 0 0 2px rgba(255,255,255,0.18);
-      transform: translate(-50%, -50%);
-      z-index: 4;
-      pointer-events: none;
+    @keyframes bb-left-wing-flap {
+      0%, 100% { transform: rotateY(0deg) rotateZ(0deg) translateY(0); }
+      22% { transform: rotateY(-30deg) rotateZ(3deg) translateY(-5px); }
+      44% { transform: rotateY(-8deg) rotateZ(1deg) translateY(0); }
+      64% { transform: rotateY(-38deg) rotateZ(5deg) translateY(-7px); }
+      82% { transform: rotateY(-12deg) rotateZ(2deg) translateY(-2px); }
     }
 
-    .bb-butterfly-body::before,
-    .bb-butterfly-body::after {
-      content: "";
-      position: absolute;
-      top: -45px;
-      width: 44px;
-      height: 58px;
-      border-top: 3px solid rgba(247, 243, 238, 0.82);
-      border-radius: 50%;
-    }
-
-    .bb-butterfly-body::before {
-      right: 22px;
-      transform: rotate(-26deg);
-    }
-
-    .bb-butterfly-body::after {
-      left: 22px;
-      transform: rotate(26deg);
-    }
-
-    @keyframes bb-left-wing-breathe {
-      0%, 100% { transform: rotateY(0deg) rotateZ(0deg); }
-      50% { transform: rotateY(-14deg) rotateZ(2deg); }
-    }
-
-    @keyframes bb-right-wing-breathe {
-      0%, 100% { transform: rotateY(0deg) rotateZ(0deg); }
-      50% { transform: rotateY(14deg) rotateZ(-2deg); }
+    @keyframes bb-right-wing-flap {
+      0%, 100% { transform: rotateY(0deg) rotateZ(0deg) translateY(0); }
+      22% { transform: rotateY(30deg) rotateZ(-3deg) translateY(-5px); }
+      44% { transform: rotateY(8deg) rotateZ(-1deg) translateY(0); }
+      64% { transform: rotateY(38deg) rotateZ(-5deg) translateY(-7px); }
+      82% { transform: rotateY(12deg) rotateZ(-2deg) translateY(-2px); }
     }
 
     @media screen and (max-width: 749px) {
@@ -298,7 +270,6 @@
       .bb-story-panel { grid-column: 1 / -1; grid-row: 2; min-height: auto; padding: 30px 24px; }
       .bb-wing { min-height: 98px; }
       .bb-wing span { padding: 14px; font-size: 16px; }
-      .bb-butterfly-body { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
