@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Butterfly Book</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-labelledby="book-title">
+      <section class="hero">
+        <p class="eyebrow">Interactive story prototype</p>
+        <h1 id="book-title">Butterfly Book</h1>
+        <p class="intro">
+          Open and close the butterfly wings like a living cover. Each full flap
+          turns the book to a fresh page.
+        </p>
+      </section>
+
+      <section class="book-stage" aria-live="polite">
+        <button class="butterfly-book" id="butterflyBook" type="button" aria-label="Flap the butterfly book wings to turn the page">
+          <span class="wing wing-left" aria-hidden="true">
+            <span class="wing-pattern upper"></span>
+            <span class="wing-pattern lower"></span>
+          </span>
+          <span class="spine" aria-hidden="true"></span>
+          <span class="wing wing-right" aria-hidden="true">
+            <span class="wing-pattern upper"></span>
+            <span class="wing-pattern lower"></span>
+          </span>
+          <span class="page-content">
+            <span class="page-number" id="pageNumber">Page 1</span>
+            <span class="page-title" id="pageTitle">The First Flutter</span>
+            <span class="page-copy" id="pageCopy">A small act of faith opens wide like wings catching morning light.</span>
+          </span>
+        </button>
+      </section>
+
+      <div class="controls">
+        <button id="flapButton" class="primary" type="button">Close & reopen wings</button>
+        <p id="status" class="status">Ready to turn the page.</p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
