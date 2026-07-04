@@ -89,7 +89,7 @@
       gap: 18px 20px;
       align-items: stretch;
       perspective: 1400px;
-      perspective-origin: 50% 42%;
+      perspective-origin: 50% 50%;
       isolation: isolate;
     }
 
@@ -240,29 +240,29 @@
     }
 
     .bb-butterfly-stage.is-flapping .bb-wing-left {
-      transform: translateZ(120px) rotateX(-10deg) rotateY(-82deg) rotateZ(-4deg) scale(0.98);
+      transform: translateX(18px) translateZ(86px) rotateX(-3deg) rotateY(88deg) rotateZ(-2deg) scale(0.96);
       animation-play-state: paused;
     }
 
     .bb-butterfly-stage.is-flapping .bb-wing-right {
-      transform: translateZ(120px) rotateX(-10deg) rotateY(82deg) rotateZ(4deg) scale(0.98);
+      transform: translateX(-18px) translateZ(86px) rotateX(-3deg) rotateY(-88deg) rotateZ(2deg) scale(0.96);
       animation-play-state: paused;
     }
 
     @keyframes bb-left-wing-flap {
-      0%, 100% { transform: translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-      24% { transform: translateZ(42px) rotateX(-5deg) rotateY(-34deg) rotateZ(3deg); }
-      46% { transform: translateZ(10px) rotateX(-1deg) rotateY(-8deg) rotateZ(1deg); }
-      68% { transform: translateZ(58px) rotateX(-7deg) rotateY(-42deg) rotateZ(5deg); }
-      86% { transform: translateZ(18px) rotateX(-2deg) rotateY(-14deg) rotateZ(2deg); }
+      0%, 100% { transform: translateX(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+      18% { transform: translateX(8px) translateZ(28px) rotateX(-2deg) rotateY(34deg) rotateZ(-1deg); }
+      36% { transform: translateX(16px) translateZ(72px) rotateX(-3deg) rotateY(78deg) rotateZ(-2deg); }
+      54% { transform: translateX(10px) translateZ(38px) rotateX(-2deg) rotateY(46deg) rotateZ(-1deg); }
+      76% { transform: translateX(2px) translateZ(8px) rotateX(0deg) rotateY(10deg) rotateZ(0deg); }
     }
 
     @keyframes bb-right-wing-flap {
-      0%, 100% { transform: translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-      24% { transform: translateZ(42px) rotateX(-5deg) rotateY(34deg) rotateZ(-3deg); }
-      46% { transform: translateZ(10px) rotateX(-1deg) rotateY(8deg) rotateZ(-1deg); }
-      68% { transform: translateZ(58px) rotateX(-7deg) rotateY(42deg) rotateZ(-5deg); }
-      86% { transform: translateZ(18px) rotateX(-2deg) rotateY(14deg) rotateZ(-2deg); }
+      0%, 100% { transform: translateX(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+      18% { transform: translateX(-8px) translateZ(28px) rotateX(-2deg) rotateY(-34deg) rotateZ(1deg); }
+      36% { transform: translateX(-16px) translateZ(72px) rotateX(-3deg) rotateY(-78deg) rotateZ(2deg); }
+      54% { transform: translateX(-10px) translateZ(38px) rotateX(-2deg) rotateY(-46deg) rotateZ(1deg); }
+      76% { transform: translateX(-2px) translateZ(8px) rotateX(0deg) rotateY(-10deg) rotateZ(0deg); }
     }
 
     @media screen and (max-width: 749px) {
