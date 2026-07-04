@@ -1,19 +1,27 @@
 # Faith Behind The Product
 
-This repository contains a copy-paste Shopify **Custom liquid** section for an interactive Blessed Billionairess butterfly-book story block.
+This repository contains a copy-paste Shopify **Custom liquid** section for an interactive Blessed Billionairess butterfly story block.
 
 ## Shopify usage
 
 1. In Shopify Admin, go to **Online Store → Themes → Customize**.
-2. Add a **Custom liquid** section where you want the butterfly-book story block to appear.
+2. Add a **Custom liquid** section where you want the butterfly story block to appear.
 3. Copy the full contents of `custom-liquid-section.html` into that Custom liquid field.
 4. Save and preview the theme.
 
 The snippet is self-contained: it includes the markup, styles, and scoped JavaScript in one file.
 
+## Product metafield content
+
+The section reads story copy from the product metafield `custom.faith_story`.
+
+- On a product page, the current product is shown first when `product.metafields.custom.faith_story` has content.
+- On a collection page, up to four products with populated `custom.faith_story` metafields are used as the story cards.
+- If no Shopify product/metafield context is available, the snippet falls back to the demo stories so the local preview still works.
+
 ## Local preview
 
-You can preview the same snippet locally because `index.html` contains the Custom liquid-compatible section.
+`index.html` is a local demo that uses the same CSS and JavaScript with fallback story buttons. Shopify Liquid/metafield population happens in `custom-liquid-section.html`.
 
 ### Python
 
