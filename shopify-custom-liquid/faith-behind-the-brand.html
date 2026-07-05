@@ -1,0 +1,281 @@
+<section class="bb-faith-section" aria-labelledby="bb-faith-title">
+  <div class="bb-faith-section__inner">
+    <div class="bb-faith-section__butterfly-wrap" aria-label="Faith Behind The Brand story navigation">
+      <div class="bb-faith-section__butterfly" role="tablist" aria-orientation="vertical">
+        <button class="bb-faith-section__wing bb-faith-section__wing--upper-left is-active" type="button" role="tab" aria-selected="true" data-story="restoration">
+          <span class="bb-faith-section__spots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="bb-faith-section__veins" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="bb-faith-section__wing-label">Lovely<br>Restoration</span>
+        </button>
+
+        <button class="bb-faith-section__wing bb-faith-section__wing--upper-right" type="button" role="tab" aria-selected="false" data-story="billionhairess">
+          <span class="bb-faith-section__spots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="bb-faith-section__veins" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="bb-faith-section__wing-label">Billionhairess</span>
+        </button>
+
+        <button class="bb-faith-section__wing bb-faith-section__wing--lower-left" type="button" role="tab" aria-selected="false" data-story="heaven">
+          <span class="bb-faith-section__spots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="bb-faith-section__veins" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="bb-faith-section__wing-label">Scents of<br>Heaven</span>
+        </button>
+
+        <button class="bb-faith-section__wing bb-faith-section__wing--lower-right" type="button" role="tab" aria-selected="false" data-story="news">
+          <span class="bb-faith-section__spots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="bb-faith-section__veins" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="bb-faith-section__wing-label">Spread The<br>Good News</span>
+        </button>
+
+        <div class="bb-faith-section__body" aria-hidden="true">
+          <span class="bb-faith-section__antenna bb-faith-section__antenna--left"></span>
+          <span class="bb-faith-section__antenna bb-faith-section__antenna--right"></span>
+          <span class="bb-faith-section__thorax"></span>
+        </div>
+      </div>
+    </div>
+
+    <article class="bb-faith-section__card" aria-live="polite">
+      <p class="bb-faith-section__eyebrow">Faith Behind The Brand</p>
+      <h2 class="bb-faith-section__title" id="bb-faith-title">Lovely Restoration</h2>
+      <div class="bb-faith-section__divider" aria-hidden="true"></div>
+      <p class="bb-faith-section__copy">A testimony of beauty restored with intention. This wing honors the sacred work of becoming whole again—spirit, confidence, purpose, and presence renewed by grace.</p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .bb-faith-section,
+  .bb-faith-section * { box-sizing: border-box; }
+
+  .bb-faith-section {
+    --bb-cream: #F7F3EE;
+    --bb-ivory: #FFF8ED;
+    --bb-gold: #C8A25A;
+    --bb-red: #8F1D2C;
+    --bb-black: #111111;
+    --bb-ink: #211513;
+    --bb-blue: #355F87;
+    background: radial-gradient(circle at 24% 18%, rgba(200, 162, 90, .14), transparent 28%), #111111;
+    color: var(--bb-cream);
+    padding: clamp(48px, 7vw, 96px) 18px;
+    overflow: hidden;
+  }
+
+  .bb-faith-section__inner {
+    align-items: center;
+    display: grid;
+    gap: clamp(34px, 6vw, 76px);
+    grid-template-columns: minmax(310px, 560px) minmax(300px, 500px);
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1160px;
+  }
+
+  .bb-faith-section__butterfly-wrap {
+    filter: drop-shadow(0 26px 30px rgba(0, 0, 0, .42));
+    perspective: 1200px;
+    width: min(100%, 560px);
+  }
+
+  .bb-faith-section__butterfly {
+    aspect-ratio: 1.13;
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+    width: min(92vw, 540px);
+  }
+
+  .bb-faith-section__wing {
+    align-items: center;
+    appearance: none;
+    background:
+      radial-gradient(circle at 28% 25%, rgba(255, 255, 255, .22), transparent 15%),
+      radial-gradient(circle at 72% 72%, rgba(53, 95, 135, .22), transparent 22%),
+      linear-gradient(135deg, #b82a3c 0%, var(--bb-red) 42%, #4d0e18 100%);
+    border: 3px solid rgba(7, 5, 5, .96);
+    box-shadow: inset 0 0 0 2px rgba(200, 162, 90, .32), inset 16px 18px 28px rgba(255, 255, 255, .07), inset -24px -24px 36px rgba(0, 0, 0, .33), 0 18px 28px rgba(0, 0, 0, .35);
+    color: var(--bb-cream);
+    cursor: pointer;
+    display: flex;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(13px, 2vw, 19px);
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: .045em;
+    line-height: 1.13;
+    margin: 0;
+    padding: 26px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .48);
+    transform-style: preserve-3d;
+    transition: transform .9s cubic-bezier(.18, .72, .18, 1), filter .9s ease, box-shadow .9s ease;
+  }
+
+  .bb-faith-section__wing::before {
+    background: linear-gradient(120deg, rgba(255, 255, 255, .20), transparent 42%, rgba(200, 162, 90, .15));
+    content: "";
+    inset: 8px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .bb-faith-section__wing--upper-left {
+    border-radius: 72% 34% 56% 43% / 58% 43% 65% 46%;
+    clip-path: path('M 255 22 C 168 5 84 31 39 94 C 2 146 2 229 42 279 C 75 321 135 323 185 292 C 217 272 235 234 263 207 C 290 180 326 172 338 139 C 355 91 318 35 255 22 Z');
+    height: 58%;
+    left: 0;
+    top: 4%;
+    transform-origin: 94% 55%;
+    width: 61%;
+  }
+
+  .bb-faith-section__wing--upper-right {
+    border-radius: 34% 72% 43% 56% / 43% 58% 46% 65%;
+    clip-path: path('M 83 22 C 170 5 254 31 299 94 C 336 146 336 229 296 279 C 263 321 203 323 153 292 C 121 272 103 234 75 207 C 48 180 12 172 0 139 C -17 91 20 35 83 22 Z');
+    height: 58%;
+    right: 0;
+    top: 4%;
+    transform-origin: 6% 55%;
+    width: 61%;
+  }
+
+  .bb-faith-section__wing--lower-left {
+    background: radial-gradient(circle at 28% 64%, rgba(255,255,255,.15), transparent 17%), linear-gradient(145deg, #9b2030 0%, #711421 52%, #26060b 100%);
+    border-radius: 58% 36% 73% 46% / 44% 30% 70% 64%;
+    clip-path: path('M 253 4 C 193 19 163 46 134 83 C 105 119 58 124 32 159 C 2 200 17 260 62 290 C 111 323 181 300 219 251 C 254 205 269 148 306 116 C 328 96 336 62 315 34 C 301 15 279 0 253 4 Z');
+    height: 48%;
+    left: 8%;
+    top: 49%;
+    transform-origin: 88% 9%;
+    width: 52%;
+  }
+
+  .bb-faith-section__wing--lower-right {
+    background: radial-gradient(circle at 72% 64%, rgba(255,255,255,.15), transparent 17%), linear-gradient(215deg, #9b2030 0%, #711421 52%, #26060b 100%);
+    border-radius: 36% 58% 46% 73% / 30% 44% 64% 70%;
+    clip-path: path('M 62 4 C 122 19 152 46 181 83 C 210 119 257 124 283 159 C 313 200 298 260 253 290 C 204 323 134 300 96 251 C 61 205 46 148 9 116 C -13 96 -21 62 0 34 C 14 15 36 0 62 4 Z');
+    height: 48%;
+    right: 8%;
+    top: 49%;
+    transform-origin: 12% 9%;
+    width: 52%;
+  }
+
+  .bb-faith-section__wing:hover,
+  .bb-faith-section__wing:focus-visible,
+  .bb-faith-section__wing.is-active { filter: brightness(1.12) saturate(1.08); z-index: 4; }
+  .bb-faith-section__wing--upper-left:hover,
+  .bb-faith-section__wing--upper-left:focus-visible,
+  .bb-faith-section__wing--upper-left.is-active,
+  .bb-faith-section__wing--lower-left:hover,
+  .bb-faith-section__wing--lower-left:focus-visible,
+  .bb-faith-section__wing--lower-left.is-active { transform: rotateY(-24deg) translateZ(28px); }
+  .bb-faith-section__wing--upper-right:hover,
+  .bb-faith-section__wing--upper-right:focus-visible,
+  .bb-faith-section__wing--upper-right.is-active,
+  .bb-faith-section__wing--lower-right:hover,
+  .bb-faith-section__wing--lower-right:focus-visible,
+  .bb-faith-section__wing--lower-right.is-active { transform: rotateY(24deg) translateZ(28px); }
+
+  .bb-faith-section__veins,
+  .bb-faith-section__spots,
+  .bb-faith-section__wing-label { position: relative; z-index: 1; }
+  .bb-faith-section__veins { inset: 0; position: absolute; z-index: 0; }
+  .bb-faith-section__veins i { background: linear-gradient(90deg, transparent, rgba(5, 4, 4, .55), rgba(200,162,90,.42), transparent); height: 2px; left: 20%; position: absolute; top: 50%; transform-origin: right center; width: 65%; }
+  .bb-faith-section__veins i:nth-child(1) { transform: rotate(-27deg); }
+  .bb-faith-section__veins i:nth-child(2) { transform: rotate(6deg); }
+  .bb-faith-section__veins i:nth-child(3) { transform: rotate(34deg); }
+  .bb-faith-section__wing--upper-right .bb-faith-section__veins i,
+  .bb-faith-section__wing--lower-right .bb-faith-section__veins i { left: 15%; transform-origin: left center; }
+
+  .bb-faith-section__spots { inset: 0; position: absolute; }
+  .bb-faith-section__spots i { background: rgba(247, 243, 238, .92); border: 1px solid rgba(200, 162, 90, .42); border-radius: 50%; box-shadow: 0 1px 4px rgba(0,0,0,.35); height: 13px; position: absolute; width: 13px; }
+  .bb-faith-section__spots i:nth-child(1) { left: 24%; top: 18%; }
+  .bb-faith-section__spots i:nth-child(2) { left: 15%; top: 38%; transform: scale(.74); }
+  .bb-faith-section__spots i:nth-child(3) { left: 35%; top: 69%; transform: scale(.58); }
+  .bb-faith-section__wing--upper-right .bb-faith-section__spots i:nth-child(1),
+  .bb-faith-section__wing--lower-right .bb-faith-section__spots i:nth-child(1) { left: auto; right: 24%; }
+  .bb-faith-section__wing--upper-right .bb-faith-section__spots i:nth-child(2),
+  .bb-faith-section__wing--lower-right .bb-faith-section__spots i:nth-child(2) { left: auto; right: 15%; }
+  .bb-faith-section__wing--upper-right .bb-faith-section__spots i:nth-child(3),
+  .bb-faith-section__wing--lower-right .bb-faith-section__spots i:nth-child(3) { left: auto; right: 35%; }
+
+  .bb-faith-section__body { filter: drop-shadow(0 10px 12px rgba(0, 0, 0, .52)); height: 64%; left: 50%; pointer-events: none; position: absolute; top: 14%; transform: translateX(-50%); width: 12%; z-index: 8; }
+  .bb-faith-section__thorax { background: linear-gradient(90deg, #050505, #2b1b14 30%, #080606 58%, #C8A25A 59%, #0b0807 64%, #050505); border: 1px solid rgba(200,162,90,.44); border-radius: 48% 48% 44% 44% / 28% 28% 72% 72%; box-shadow: inset 0 16px 20px rgba(255,255,255,.08), inset 0 -20px 25px rgba(0,0,0,.72); display: block; height: 100%; margin: 0 auto; width: 54%; }
+  .bb-faith-section__antenna { border-top: 2px solid rgba(200,162,90,.92); height: 30%; position: absolute; top: -12%; width: 58%; }
+  .bb-faith-section__antenna--left { border-left: 2px solid rgba(200,162,90,.92); border-radius: 100% 0 0 0; left: -10%; transform: rotate(-28deg); transform-origin: bottom right; }
+  .bb-faith-section__antenna--right { border-right: 2px solid rgba(200,162,90,.92); border-radius: 0 100% 0 0; right: -10%; transform: rotate(28deg); transform-origin: bottom left; }
+
+  .bb-faith-section__card { background: linear-gradient(145deg, var(--bb-ivory), #F2E4D0); border: 1px solid rgba(200, 162, 90, .55); border-radius: 28px; box-shadow: 0 28px 55px rgba(0, 0, 0, .38), inset 0 1px 0 rgba(255,255,255,.85); color: var(--bb-ink); padding: clamp(30px, 4vw, 54px); }
+  .bb-faith-section__eyebrow { color: var(--bb-red); font-size: 12px; font-weight: 700; letter-spacing: .24em; margin: 0 0 14px; text-transform: uppercase; }
+  .bb-faith-section__title { color: #2b1714; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 500; line-height: 1.04; margin: 0; transition: opacity .28s ease, transform .28s ease; }
+  .bb-faith-section__divider { background: linear-gradient(90deg, var(--bb-gold), rgba(200,162,90,0)); height: 2px; margin: 24px 0; width: 48%; }
+  .bb-faith-section__copy { color: #4a3832; font-size: clamp(16px, 1.8vw, 18px); line-height: 1.75; margin: 0; transition: opacity .28s ease, transform .28s ease; }
+  .bb-faith-section__card.is-changing .bb-faith-section__title,
+  .bb-faith-section__card.is-changing .bb-faith-section__copy { opacity: 0; transform: translateY(8px); }
+
+  @media (max-width: 840px) {
+    .bb-faith-section__inner { grid-template-columns: 1fr; }
+    .bb-faith-section__butterfly-wrap { justify-self: center; }
+    .bb-faith-section__card { margin: 0 auto; max-width: 560px; }
+    .bb-faith-section__wing { font-size: clamp(11px, 3.3vw, 16px); padding: 18px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bb-faith-section__wing,
+    .bb-faith-section__title,
+    .bb-faith-section__copy { transition: none; }
+  }
+</style>
+
+<script>
+  (function () {
+    var section = document.currentScript.closest('.bb-faith-section');
+    if (!section) return;
+
+    var stories = {
+      restoration: {
+        title: 'Lovely Restoration',
+        copy: 'A testimony of beauty restored with intention. This wing honors the sacred work of becoming whole again—spirit, confidence, purpose, and presence renewed by grace.'
+      },
+      billionhairess: {
+        title: 'Billionhairess',
+        copy: 'A declaration of kingdom confidence: abundance with humility, elegance with discipline, and wealth that begins within before it ever becomes visible.'
+      },
+      heaven: {
+        title: 'Scents of Heaven',
+        copy: 'Fragrance as remembrance. Each note is created to feel reverent, feminine, and elevated—a quiet invitation to carry peace, prayer, and beauty into the room.'
+      },
+      news: {
+        title: 'Spread The Good News',
+        copy: 'The mission wing. It represents light shared with grace, testimony carried with courage, and a brand built to make faith feel beautiful, refined, and alive.'
+      }
+    };
+
+    var wings = section.querySelectorAll('.bb-faith-section__wing');
+    var card = section.querySelector('.bb-faith-section__card');
+    var title = section.querySelector('.bb-faith-section__title');
+    var copy = section.querySelector('.bb-faith-section__copy');
+
+    wings.forEach(function (wing) {
+      wing.addEventListener('click', function () {
+        var story = stories[wing.getAttribute('data-story')];
+        if (!story) return;
+
+        wings.forEach(function (item) {
+          item.classList.toggle('is-active', item === wing);
+          item.setAttribute('aria-selected', item === wing ? 'true' : 'false');
+        });
+
+        card.classList.add('is-changing');
+        window.setTimeout(function () {
+          title.textContent = story.title;
+          copy.textContent = story.copy;
+          card.classList.remove('is-changing');
+        }, 240);
+      });
+    });
+  }());
+</script>
