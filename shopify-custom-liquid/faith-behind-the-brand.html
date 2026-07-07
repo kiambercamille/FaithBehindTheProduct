@@ -1,0 +1,247 @@
+<section class="bb-faith-section" aria-labelledby="bb-faith-title">
+  <div class="bb-faith-section__inner">
+    <div class="bb-faith-section__art-wrap" aria-label="Faith Behind The Brand butterfly story navigation">
+      <div class="bb-faith-section__butterfly-stage">
+        <img class="bb-faith-section__butterfly-art" src="REPLACE_WITH_SHOPIFY_FILE_URL" alt="Blessed Billionairess butterfly logo artwork" loading="lazy" width="900" height="760">
+
+        <div class="bb-faith-section__hotspots" aria-label="Butterfly story hotspots">
+          <button class="bb-faith-section__hotspot bb-faith-section__hotspot--upper-left is-active" type="button" aria-pressed="true" data-story="restoration">
+            <span>Lovely<br>Restoration</span>
+          </button>
+          <button class="bb-faith-section__hotspot bb-faith-section__hotspot--upper-right" type="button" aria-pressed="false" data-story="billionhairess">
+            <span>Billionhairess</span>
+          </button>
+          <button class="bb-faith-section__hotspot bb-faith-section__hotspot--lower-left" type="button" aria-pressed="false" data-story="heaven">
+            <span>Scents of<br>Heaven</span>
+          </button>
+          <button class="bb-faith-section__hotspot bb-faith-section__hotspot--lower-right" type="button" aria-pressed="false" data-story="news">
+            <span>Spread The<br>Good News</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <article class="bb-faith-section__card" aria-live="polite">
+      <p class="bb-faith-section__eyebrow">Faith Behind The Brand</p>
+      <h2 class="bb-faith-section__title" id="bb-faith-title">Lovely Restoration</h2>
+      <div class="bb-faith-section__divider" aria-hidden="true"></div>
+      <p class="bb-faith-section__copy">Lovely Restoration was created to represent beauty, healing, and renewal. This collection supports the journey of restoration from the inside out, encouraging confidence, care, and faith-filled transformation.</p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .bb-faith-section,
+  .bb-faith-section * { box-sizing: border-box; }
+
+  .bb-faith-section {
+    --bb-cream: #F7F3EE;
+    --bb-ivory: #FFF8ED;
+    --bb-gold: #C8A25A;
+    --bb-red: #8F1D2C;
+    --bb-black: #111111;
+    --bb-ink: #211513;
+    background: radial-gradient(circle at 22% 18%, rgba(200, 162, 90, .14), transparent 30%), #111111;
+    color: var(--bb-cream);
+    padding: clamp(48px, 7vw, 96px) 18px;
+    overflow: hidden;
+  }
+
+  .bb-faith-section__inner {
+    align-items: center;
+    display: grid;
+    gap: clamp(34px, 6vw, 76px);
+    grid-template-columns: minmax(310px, 570px) minmax(300px, 500px);
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1180px;
+  }
+
+  .bb-faith-section__art-wrap {
+    justify-self: center;
+    width: min(100%, 570px);
+  }
+
+  .bb-faith-section__butterfly-stage {
+    aspect-ratio: 900 / 760;
+    position: relative;
+    width: 100%;
+  }
+
+  .bb-faith-section__butterfly-art {
+    display: block;
+    filter: drop-shadow(0 28px 32px rgba(0, 0, 0, .46));
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .bb-faith-section__hotspots {
+    inset: 0;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .bb-faith-section__hotspot {
+    appearance: none;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--bb-cream);
+    cursor: pointer;
+    display: grid;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(12px, 1.85vw, 18px);
+    font-weight: 600;
+    letter-spacing: .045em;
+    line-height: 1.12;
+    margin: 0;
+    padding: 0;
+    place-items: center;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 3px 9px rgba(0, 0, 0, .82);
+    transition: background .45s ease, border-color .45s ease, box-shadow .45s ease, color .45s ease, transform .45s ease;
+  }
+
+  .bb-faith-section__hotspot span {
+    background: rgba(17, 17, 17, .24);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .26), 0 0 18px rgba(200, 162, 90, .12);
+    outline: 1px solid rgba(200, 162, 90, .36);
+    padding: .42em .72em;
+  }
+
+  .bb-faith-section__hotspot--upper-left { height: 45%; left: 3%; top: 6%; width: 42%; }
+  .bb-faith-section__hotspot--upper-right { height: 45%; right: 3%; top: 6%; width: 42%; }
+  .bb-faith-section__hotspot--lower-left { height: 36%; left: 24%; top: 50%; width: 23%; }
+  .bb-faith-section__hotspot--lower-right { height: 36%; right: 24%; top: 50%; width: 23%; }
+
+  .bb-faith-section__hotspot:hover,
+  .bb-faith-section__hotspot:focus-visible,
+  .bb-faith-section__hotspot.is-active {
+    background: rgba(200, 162, 90, .045);
+    border-color: rgba(200, 162, 90, .58);
+    box-shadow: inset 0 0 34px rgba(200, 162, 90, .14), 0 0 28px rgba(200, 162, 90, .20);
+    color: #ffffff;
+    outline: none;
+    transform: translateY(-2px);
+  }
+
+  .bb-faith-section__hotspot:focus-visible span,
+  .bb-faith-section__hotspot.is-active span {
+    background: rgba(143, 29, 44, .54);
+    outline-color: rgba(247, 243, 238, .54);
+  }
+
+  .bb-faith-section__card {
+    background: linear-gradient(145deg, var(--bb-ivory), #F2E4D0);
+    border: 1px solid rgba(200, 162, 90, .55);
+    border-radius: 28px;
+    box-shadow: 0 28px 55px rgba(0, 0, 0, .38), inset 0 1px 0 rgba(255,255,255,.85);
+    color: var(--bb-ink);
+    padding: clamp(30px, 4vw, 54px);
+  }
+
+  .bb-faith-section__eyebrow {
+    color: var(--bb-red);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .24em;
+    margin: 0 0 14px;
+    text-transform: uppercase;
+  }
+
+  .bb-faith-section__title {
+    color: #2b1714;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(30px, 4vw, 50px);
+    font-weight: 500;
+    line-height: 1.04;
+    margin: 0;
+    transition: opacity .28s ease, transform .28s ease;
+  }
+
+  .bb-faith-section__divider {
+    background: linear-gradient(90deg, var(--bb-gold), rgba(200,162,90,0));
+    height: 2px;
+    margin: 24px 0;
+    width: 48%;
+  }
+
+  .bb-faith-section__copy {
+    color: #4a3832;
+    font-size: clamp(16px, 1.8vw, 18px);
+    line-height: 1.75;
+    margin: 0;
+    transition: opacity .28s ease, transform .28s ease;
+  }
+
+  .bb-faith-section__card.is-changing .bb-faith-section__title,
+  .bb-faith-section__card.is-changing .bb-faith-section__copy {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  @media (max-width: 840px) {
+    .bb-faith-section__inner { grid-template-columns: 1fr; }
+    .bb-faith-section__art-wrap { max-width: 570px; }
+    .bb-faith-section__card { margin: 0 auto; max-width: 560px; }
+    .bb-faith-section__hotspot { font-size: clamp(10px, 3vw, 15px); }
+    .bb-faith-section__hotspot span { padding: .45em .66em; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bb-faith-section__hotspot,
+    .bb-faith-section__title,
+    .bb-faith-section__copy { transition: none; }
+  }
+</style>
+
+<script>
+  (function () {
+    var section = document.currentScript.closest('.bb-faith-section');
+    if (!section) return;
+
+    var stories = {
+      restoration: {
+        title: 'Lovely Restoration',
+        copy: 'Lovely Restoration was created to represent beauty, healing, and renewal. This collection supports the journey of restoration from the inside out, encouraging confidence, care, and faith-filled transformation.'
+      },
+      billionhairess: {
+        title: 'Billionhairess',
+        copy: 'Billionhairess represents beauty, excellence, and confidence. Each piece is designed to help women walk boldly in the beauty and purpose God has given them.'
+      },
+      heaven: {
+        title: 'Scents of Heaven',
+        copy: 'Scents of Heaven was created to bless and brighten personal spaces through luxury fragrance, peace, and intentional moments of faith-filled reflection.'
+      },
+      news: {
+        title: 'Spread The Good News',
+        copy: 'Spread The Good News Apparel was created to inspire conversations, share the Gospel, and remind believers to wear their faith with boldness, purpose, and identity.'
+      }
+    };
+
+    var hotspots = section.querySelectorAll('.bb-faith-section__hotspot');
+    var card = section.querySelector('.bb-faith-section__card');
+    var title = section.querySelector('.bb-faith-section__title');
+    var copy = section.querySelector('.bb-faith-section__copy');
+
+    hotspots.forEach(function (hotspot) {
+      hotspot.addEventListener('click', function () {
+        var story = stories[hotspot.getAttribute('data-story')];
+        if (!story) return;
+
+        hotspots.forEach(function (item) {
+          item.classList.toggle('is-active', item === hotspot);
+          item.setAttribute('aria-pressed', item === hotspot ? 'true' : 'false');
+        });
+
+        card.classList.add('is-changing');
+        window.setTimeout(function () {
+          title.textContent = story.title;
+          copy.textContent = story.copy;
+          card.classList.remove('is-changing');
+        }, 240);
+      });
+    });
+  }());
+</script>
